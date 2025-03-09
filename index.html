@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SignUpPage</title>
+    <title>LoginPage</title>
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -17,34 +17,34 @@
     <div class="wrapper-container">
       <div class="side-image">
         <img
-          src="./Assets for Quiz User App/welcome.svg"
+          src="./Assets for Quiz User App/cloud image.png"
           alt=""
           srcset=""
         />
       </div>
-      <div >
+      <div>
         <form action="" class="form-container">
-          <label for="heading" class="heading">SignUp</label>
-          <span class="grey-text">Sign Up to Join</span>
-          <label for="emaii">Full Name <i>*</i></label>
-          <input type="email" placeholder="Full Name" />
+          <label for="heading" class="heading">Login</label>
+          <span class="grey-text">Please enter your details below</span>
           <label for="emaii">Email <i>*</i></label>
           <input type="email" placeholder="xyz12@gmail.com" />
+
           <label for="Password">Password <i>*</i></label>
           <div class="password-with-eye">
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password" id="passwordFiled" />
             <i class="fa-solid fa-eye" id="togglePassword"></i>
           </div>
           <button class="login-button">Login</button>
           <button class="google-button">
-            <img src="./Assets for Quiz User App/google.svg" alt="" srcset="">
-         <span>Sign Up with Google</span>
+            <img src="./Assets for Quiz User App/google.svg" alt="" srcset="" />
+            <span>Sign Up with Google</span>
           </button>
           <span>
-            Have an account? <a href="./index.html"> Login? </a>
+            Don't have an account? <a href="./SignUpPage.html"> Sign Up? </a>
           </span>
         </form>
       </div>
     </div>
   </body>
+  <script src="./main.js"></script>
 </html>

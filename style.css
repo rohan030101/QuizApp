@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.wrapper-container {
+  display: flex;
+  height: 100vh;
+  padding: 10% 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-image img {
+  max-width: 80%;
+}
+.form-container {
+  width: 370px;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.form-container label {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0.9rem 0 0.3rem 0;
+}
+.form-container label i{
+  color: red;
+}
+.form-container .heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.form-container input {
+  padding: 0.9rem 0.6rem;
+  margin-bottom: .5rem;
+  width: 100%;
+  border: 1px solid #8e8e93;
+  border-radius: 8px;
+}
+.form-container i {
+  color: #8e8e93;
+}
+
+.form-container .grey-text {
+  color: #8e8e93;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+
+.password-with-eye{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8e8e93;
+  border-radius: 8px;
+  margin-bottom: .8rem;
+}
+
+.password-with-eye input{
+  border: none;
+  margin: 0;
+}
+
+.password-with-eye i {
+  margin-right:0.9rem;
+  color:#8E8E93;
+}
+
+.login-button {
+  background-color: #f3bd00;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  margin: 0.75rem 0;
+}
+
+.google-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#FEFEFE;
+  min-width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  align-self: center;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  box-shadow: 1px 4px 4px 0px #0000000d;
+  margin: 0.25rem 0 1.8rem 0;
+  align-content: center;
+}
+
+.google-button img{
+  height: 30px;
+  margin-right: 1rem;
+}
+
+.form-container span {
+  text-align: center;
+}
+
