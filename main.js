@@ -18,7 +18,7 @@ toggle.addEventListener('click',()=>{
         passwordFiled.type = "password";
         toggle.classList.remove('fa-eye-slash');
         toggle.classList.add('fa-eye');
-        console.log(passwordFiled.type);
+        console.log(passwordFiled.type);    
 
     }
 

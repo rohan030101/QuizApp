@@ -71,6 +71,10 @@
   margin: 0;
 }
 
+.password-with-eye input:focus{
+  outline: none;
+}
+
 .password-with-eye i {
   margin-right:0.9rem;
   color:#8E8E93;
