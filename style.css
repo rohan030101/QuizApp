@@ -9,7 +9,8 @@
 .wrapper-container {
   display: flex;
   height: 100vh;
-  padding: 10% 20%;
+  margin: auto;
+  padding: 10% 10%;
   justify-content: center;
   align-items: center;
 }
@@ -22,7 +23,7 @@
   height: 60vh;
   display: flex;
   flex-direction: column;
-  margin-left: 2rem;
+  margin: 1rem 2rem;
 }
 
 .form-container label {
@@ -54,6 +55,13 @@
   font-size: 1rem;
   font-weight: 400;
   text-align: left;
+}
+
+.form-container a{
+  color: #344054;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #0948B4;
 }
 
 
