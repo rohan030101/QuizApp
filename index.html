@@ -23,7 +23,7 @@
         />
       </div>
       <div>
-        <form action="" class="form-container">
+        <form  onsubmit="return false" class="form-container">
           <label for="heading" class="heading">Login</label>
           <span class="grey-text">Please enter your details below</span>
           <label for="emaii">Email <i>*</i></label>
@@ -33,7 +33,7 @@
             <input type="password" placeholder="Password" id="passwordFiled" />
             <i class="fa-solid fa-eye" id="togglePassword"></i>
           </div>
-          <button class="login-button">Login</button>
+          <button class="login-button" onclick="validateUser()">Login</button>
           <button class="google-button">
             <img src="./Assets for Quiz User App/google.svg" alt="" srcset="" />
             <span>Sign Up with Google</span>
