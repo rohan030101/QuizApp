@@ -40,10 +40,6 @@ function validateUser() {
   usersList = JSON.parse(localStorage.getItem('users'));
   console.log(usersList);
 
-
-  if(usersList.userEmail == userEmail && usersList.userPassword == userPassword) {
-    console.log('match');
-  }
 }
 
 let users = localStorage.getItem("users");
