@@ -199,13 +199,18 @@ span {
   align-items: center;
 }
 
+<<<<<<< HEAD
 .container * {
+=======
+.container *{
+>>>>>>> 67054ca998c13322796cbe6065bce6f7f9a29000
   margin-top: 10px;
 }
 
 /* Dashboard Page Ends here */
 
 /* Question Page */
+<<<<<<< HEAD
 .question-section {
   margin: 20px;
   padding: 0 20px;
@@ -253,3 +258,8 @@ span {
 }
 
 /* Question Page Ends Here */
+=======
+
+
+/* Question Page Ends Here */
+>>>>>>> 67054ca998c13322796cbe6065bce6f7f9a29000
