@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LoginPage</title>
-    <link rel="stylesheet" href="./Styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -16,34 +16,35 @@
   <body>
     <div class="wrapper-container">
       <div class="side-image">
-        <img
-          src="./Assets/cloud image.png"
+        <img  
+          src="./assets/cloud image.png"
           alt=""
           srcset=""
         />
       </div>
       <div>
-        <form onsubmit="return false" class="form-container">
+        <form onsubmit="" class="form-container">
           <label for="heading" class="heading">Login</label>
           <span class="grey-text">Please enter your details below</span>
           <label for="emaii">Email <i>*</i></label>
           <input type="email" placeholder="xyz12@gmail.com" id="userEmail" />
           <label for="Password">Password <i>*</i></label>
           <div class="password-with-eye">
-            <input type="password" placeholder="Password" id="passwordFiled" />
+            <input type="password" placeholder="Password" id="passwordField" />
             <i class="fa-solid fa-eye" id="togglePassword"></i>
           </div>
-          <button class="login-button" onclick="validateUser()">Login</button>
+          <button class="login-button" onclick="login()">Login</button>
           <button class="google-button">
-            <img src="./Assets/google.svg" alt="" srcset="" />
+            <img src="./assets/google.svg" alt="" srcset="" />
             <span>Sign Up with Google</span>
           </button>
           <span>
-            Don't have an account? <a href="./Pages/SignUpPage.html"> Sign Up? </a>
+            Don't have an account? <a href="./pages/signup-page.html"> Sign Up? </a>
           </span>
         </form>
       </div>
     </div>
   </body>
   <script src="./main.js"></script>
+  <script src="/scripts/loginpage.js"></script>
 </html>

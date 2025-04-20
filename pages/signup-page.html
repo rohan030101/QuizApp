@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SignUpPage</title>
-    <link rel="stylesheet" href="/Styles/style.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -16,50 +16,36 @@
   <body>
     <div class="wrapper-container">
       <div class="side-image">
-<<<<<<< HEAD:Pages/SignUpPage.html
         <img
-          src="/Assets/welcome.svg"
+          src="/assets/welcome.svg"
           alt=""
           srcset=""
         />
-=======
-        <img src="./Assets for Quiz User App/welcome.svg" alt="" srcset="" />
->>>>>>> 67054ca998c13322796cbe6065bce6f7f9a29000:SignUpPage.html
       </div>
       <div>
-        <form action="" class="form-container">
+        <form action="" onsubmit="return false" class="form-container">
           <label for="heading" class="heading">SignUp</label>
           <span class="grey-text">Sign Up to Join</span>
           <label for="emaii">Full Name <i>*</i></label>
-          <input type="email" placeholder="Full Name" id="userName" />
+          <input type="text" placeholder="Full Name" id="userName" />
           <label for="emaii">Email <i>*</i></label>
           <input type="email" placeholder="xyz12@gmail.com" id="userEmail" />
           <label for="Password">Password <i>*</i></label>
           <div class="password-with-eye">
-            <input type="password" placeholder="Password" id="passwordFiled" />
+            <input type="password" placeholder="Password" id="passwordField" />
             <i class="fa-solid fa-eye" id="togglePassword"></i>
           </div>
           <button class="login-button">Sign Up  </button>
           <button class="google-button">
-<<<<<<< HEAD:Pages/SignUpPage.html
-            <img src="/Assets/google.svg" alt="" srcset="">
+            <img src="/assets/google.svg" alt="" srcset="">
          <span>Sign Up with Google</span>
           </button>
           <span>
             Have an account? <a href="/index.html"> Login? </a>
           </span>
-=======
-            <img src="./Assets for Quiz User App/google.svg" alt="" srcset="" />
-            <span>Sign Up with Google</span>
-          </button>
-          <div class="terms-checkbox" style="display: flex; width: 300px">
-            <input type="checkbox" class="terms-box" /> <span>I accept Terms & Conditions</span>
-          </div>
-          <span> Have an account? <a href="./index.html"> Login? </a> </span>
->>>>>>> 67054ca998c13322796cbe6065bce6f7f9a29000:SignUpPage.html
         </form>
       </div>
     </div>
   </body>
-  <script src="./main.js"></script>
+  <script src="/scripts/signuppage.js"></script>
 </html>
