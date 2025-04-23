@@ -1,8 +1,9 @@
-console.log("Script Loaded");
+// console.log("Script Loaded");
 
 //To toggle the password visibilty
 let toggle = document.getElementById("togglePassword");
-let passwordFiled = document.getElementById("passwordFiled");
+let passwordFiled = document.getElementById("passwordField");
+
 
 toggle.addEventListener("click", () => {
   if (passwordFiled.type === "password") {
@@ -18,29 +19,30 @@ toggle.addEventListener("click", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("users") === null) {
-    let users = {
-      fullName: "Dummy",
-      userEmail: "Dummy@gmail.com",
-      userPassword: "Dummy@123",
-    };
-    console.log("users not exits");
-    localStorage.setItem("users", JSON.stringify(users));
-  } else {
-    console.log("users exits");
-  }
-});
 
-//Login and Signup Section
-function validateUser() {
-  let userEmail = document.getElementById("userEmail").value;
-  let userPassword = document.getElementById("passwordFiled").value;
+// document.addEventListener("DOMContentLoaded", () => {
+//   if (localStorage.getItem("users") === null) {
+//     let users = {
+//       fullName: "Dummy",
+//       userEmail: "Dummy@gmail.com",
+//       userPassword: "Dummy@123",
+//     };
+//     console.log("users not exits");
+//     localStorage.setItem("users", JSON.stringify(users));
+//   } else {
+//     console.log("users exits");
+//   }
+// });
 
-  usersList = JSON.parse(localStorage.getItem('users'));
-  console.log(usersList);
+// //Login and Signup Section
+// function validateUser() {
+//   let userEmail = document.getElementById("userEmail").value;
+//   let userPassword = document.getElementById("passwordFiled").value;
 
-}
+//   usersList = JSON.parse(localStorage.getItem('users'));
+//   console.log(usersList);
 
-let users = localStorage.getItem("users");
-console.log(users);
+// }
+
+// let users = localStorage.getItem("users");
+// console.log(users);

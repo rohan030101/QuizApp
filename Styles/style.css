@@ -16,8 +16,11 @@
   align-items: center;
 }
 
-.side-image img {
-  max-width: 80%;
+.side-image  img {
+  width: 100;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 .form-container {
   width: 370px;
@@ -119,10 +122,10 @@
   height: 30px;
   margin-right: 1rem;
 }
-
-.form-container span {
+/* 
+.grey-text{
   text-align: center;
-}
+} */
 
 .terms-checkbox {
   margin: auto;
@@ -131,6 +134,14 @@
 .terms-checkbox input {
   width: 20%;
 }
+
+.errorEmail {
+  color: red;
+  text-align: left;
+  /* border: 20px solid black; */
+}
+
+
 
 /* Login and Signup Page ends here  */
 
@@ -173,8 +184,7 @@
   color: #1c1c1e;
 }
 
-.heading-section ul,
-span {
+.heading-section ul .grey-text {
   color: #8e8e93;
   font-size: 12px;
 }
@@ -253,3 +263,4 @@ span {
 }
 
 /* Question Page Ends Here */
+

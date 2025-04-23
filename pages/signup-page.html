@@ -16,36 +16,37 @@
   <body>
     <div class="wrapper-container">
       <div class="side-image">
-        <img
-          src="/assets/welcome.svg"
-          alt=""
-          srcset=""
-        />
+        <img src="/assets/welcome.svg" alt="" srcset="" />
       </div>
       <div>
-        <form action="" onsubmit="return false" class="form-container">
+        <form action="" class="form-container" id="sign-up">
           <label for="heading" class="heading">SignUp</label>
           <span class="grey-text">Sign Up to Join</span>
           <label for="emaii">Full Name <i>*</i></label>
           <input type="text" placeholder="Full Name" id="userName" />
-          <label for="emaii">Email <i>*</i></label>
-          <input type="email" placeholder="xyz12@gmail.com" id="userEmail" />
+          <span id="error-msg"></span>
+
+          <label for="email">Email <i>*</i></label>
+          <input type="text" placeholder="xyz12@gmail.com" id="userEmail" />
+          <span id="errorEmail"></span>
+          
           <label for="Password">Password <i>*</i></label>
           <div class="password-with-eye">
             <input type="password" placeholder="Password" id="passwordField" />
             <i class="fa-solid fa-eye" id="togglePassword"></i>
           </div>
-          <button class="login-button">Sign Up  </button>
+          <span id="error-msg"></span>
+          
+          <button class="login-button">Sign Up</button>
           <button class="google-button">
-            <img src="/assets/google.svg" alt="" srcset="">
-         <span>Sign Up with Google</span>
+            <img src="/assets/google.svg" alt="" srcset="" />
+            <span>Sign Up with Google</span>
           </button>
-          <span>
-            Have an account? <a href="/index.html"> Login? </a>
-          </span>
+          <span> Have an account? <a href="/index.html"> Login? </a> </span>
         </form>
       </div>
     </div>
   </body>
   <script src="/scripts/signuppage.js"></script>
+  <script src="/scripts//main.js"></script>
 </html>
