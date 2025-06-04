@@ -6,50 +6,48 @@
     <title>Quiz Page</title>
     <link rel="stylesheet" href="/Styles/style.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <nav class="nav-bar">
       <div class="logo">
-        <img
-          src="./Assets for Quiz User App/techoaathshala_logo.png"
-          alt=""
-          srcset=""
-        />
+        <img src="/Assets/techoaathshala_logo.png" alt="" srcset="" />
       </div>
       <div class="links-profile">
         <ul>
           <li>Edit Quizzes</li>
           <li>All Quizzes</li>
-          <li>
-            <img src="./Assets for Quiz User App/profile_picture.png" alt="" />
-          </li>
+          <li class="exitQuiz" onclick="exitQuiz()">Exit</li>
+          <!-- <li>
+            <img src="/Assets/profile_picture.png" alt="" />
+          </li> -->
         </ul>
       </div>
     </nav>
-    <section class="question-section">
-      <h2 class="question-numbers">Question 1 of 10</h2>
-      <div class="progress-bar">
-
-      </div>
+    <section class="question-section" id="questionSec">
+      <h2 class="question-numbers" id="noOfQuestions">Question 1 of 10</h2>
+      <div class="progress-bar"></div>
       <div class="question-option">
-        <label for="">1. This is the question?</label>
-        <ul>
+        <label for=""  id="questionText">1. This is the question?</label>
+        <ul id="options">
+          <!-- <li><input type="radio" name="" id="" /> 1. Option</li>
           <li><input type="radio" name="" id="" /> 1. Option</li>
           <li><input type="radio" name="" id="" /> 1. Option</li>
-          <li><input type="radio" name="" id="" /> 1. Option</li>
-          <li><input type="radio" name="" id="" /> 1. Option</li>
+          <li><input type="radio" name="" id="" /> 1. Option</li> -->
         </ul>
       </div>
       <div class="question-nagivation-buttons">
-        <button><i class="fa-solid fa-arrow-left"></i> Previous</button>
-        <button> Submit & Continue <i class="fa-solid fa-arrow-right"></i></button>
+        <button id="previous"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+        <button id="submitAndNext">
+          Submit & Continue <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </div>
     </section>
   </body>
+  <script src="/scripts/main.js"></script>
 </html>

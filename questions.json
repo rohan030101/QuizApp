@@ -1,0 +1,222 @@
+[
+  {
+    "index": 1,
+    "question": "What does HTML stand for?",
+    "options": [
+      "1. Hyperlinks and Text Markup Language",
+      "2. Home Tool Markup Language",
+      "3. Hyper Text Markup Language",
+      "4. Hyperlinking Text Management Language"
+    ],
+    "answer": "3"
+  },
+  {
+    "index": 2,
+    "question": "Which tag is used to create a hyperlink in HTML?",
+    "options": [
+      "1. <a>",
+      "2. <link>",
+      "3. <href>",
+      "4. <url>"
+    ],
+    "answer": "1"
+  },
+  {
+    "index": 3,
+    "question": "Which HTML element is used to define a paragraph?",
+    "options": [
+      "1. <p>",
+      "2. <para>",
+      "3. <text>",
+      "4. <paragraph>"
+    ],
+    "answer": "1"
+  },
+  {
+    "index": 4,
+    "question": "What is the correct HTML for adding a background color?",
+    "options": [
+      "1. <body style='background-color:yellow;'>",
+      "2. <background>yellow</background>",
+      "3. <body bg='yellow'>",
+      "4. <body background='yellow'>"
+    ],
+    "answer": "1"
+  },
+  {
+    "index": 5,
+    "question": "Which CSS property is used to change the text color?",
+    "options": [
+      "1. font-color",
+      "2. text-color",
+      "3. color",
+      "4. foreground-color"
+    ],
+    "answer": "3"
+  },
+  {
+    "index": 6,
+    "question": "Which CSS property controls the text size?",
+    "options": [
+      "1. font-style",
+      "2. text-size",
+      "3. font-size",
+      "4. text-style"
+    ],
+    "answer": "3"
+  },
+  {
+    "index": 7,
+    "question": "What does CSS stand for?",
+    "options": [
+      "1. Computer Style Sheets",
+      "2. Creative Style Sheets",
+      "3. Colorful Style Sheets",
+      "4. Cascading Style Sheets"
+    ],
+    "answer": "4"
+  },
+  {
+    "index": 8,
+    "question": "Which is the correct CSS syntax?",
+    "options": [
+      "1. body {color: black;}",
+      "2. {body:color=black;}",
+      "3. {body;color:black;}",
+      "4. body:color=black;"
+    ],
+    "answer": "1"
+  },
+  {
+    "index": 9,
+    "question": "How do you include an external CSS file?",
+    "options": [
+      "1. <link rel='stylesheet' href='styles.css'>",
+      "2. <style src='styles.css'>",
+      "3. <css link='styles.css'>",
+      "4. <stylesheet>styles.css</stylesheet>"
+    ],
+    "answer": "1"
+  },
+  {
+    "index": 10,
+    "question": "What is the default position of an HTML element?",
+    "options": [
+      "1. static",
+      "2. relative",
+      "3. absolute",
+      "4. fixed"
+    ],
+    "answer": "1"
+  },
+  {
+    "index": 11,
+    "question": "Which JavaScript keyword is used to declare a variable?",
+    "options": [
+      "1. var",
+      "2. int",
+      "3. string",
+      "4. letvar"
+    ],
+    "answer": "1"
+  },
+  {
+    "index": 12,
+    "question": "How do you write 'Hello World' in an alert box?",
+    "options": [
+      "1. msg('Hello World');",
+      "2. alertBox('Hello World');",
+      "3. alert('Hello World');",
+      "4. msgBox('Hello World');"
+    ],
+    "answer": "3"
+  },
+  {
+    "index": 13,
+    "question": "Which operator is used to assign a value to a variable?",
+    "options": [
+      "1. -",
+      "2. =",
+      "3. *",
+      "4. =="
+    ],
+    "answer": "2"
+  },
+  {
+    "index": 14,
+    "question": "What will `typeof []` return in JavaScript?",
+    "options": [
+      "1. 'array'",
+      "2. 'object'",
+      "3. 'list'",
+      "4. 'undefined'"
+    ],
+    "answer": "2"
+  },
+  {
+    "index": 15,
+    "question": "Which method adds a new element to the end of an array?",
+    "options": [
+      "1. push()",
+      "2. pop()",
+      "3. shift()",
+      "4. unshift()"
+    ],
+    "answer": "1"
+  },
+  {
+    "index": 16,
+    "question": "How do you comment in JavaScript?",
+    "options": [
+      "1. // This is a comment",
+      "2. ' This is a comment",
+      "3. <!-- This is a comment -->",
+      "4. # This is a comment"
+    ],
+    "answer": "1"
+  },
+  {
+    "index": 17,
+    "question": "Which event occurs when the user clicks on an HTML element?",
+    "options": [
+      "1. onmouseclick",
+      "2. onmouseover",
+      "3. onchange",
+      "4. onclick"
+    ],
+    "answer": "4"
+  },
+  {
+    "index": 18,
+    "question": "Which HTML tag is used to embed JavaScript code?",
+    "options": [
+      "1. <js>",
+      "2. <javascript>",
+      "3. <script>",
+      "4. <code>"
+    ],
+    "answer": "3"
+  },
+  {
+    "index": 19,
+    "question": "What does the `addEventListener()` method do?",
+    "options": [
+      "1. Adds a new HTML element",
+      "2. Adds a CSS rule to an element",
+      "3. Attaches an event handler to an element",
+      "4. Triggers an event"
+    ],
+    "answer": "3"
+  },
+  {
+    "index": 20,
+    "question": "How do you access the first element of an array in JavaScript?",
+    "options": [
+      "1. array(0)",
+      "2. array[1]",
+      "3. array[0]",
+      "4. array.first"
+    ],
+    "answer": "3"
+  }
+]

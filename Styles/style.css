@@ -227,7 +227,7 @@
   font-size: 40px;
 }
 .progress-bar {
-  width: 100%;
+  width: 10%;
   height: 2vh;
   background-color: #f3bd00;
   border-radius: 16px;
@@ -261,6 +261,10 @@
 
 .question-nagivation-buttons button:hover {
   background-color: #bfbfc5;
+}
+
+.exitQuiz{
+  cursor: pointer;
 }
 
 /* Question Page Ends Here */
