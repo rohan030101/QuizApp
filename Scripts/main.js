@@ -1,4 +1,4 @@
-questionArr = [
+const questionsArr = [
   {
     index: 1,
     question: "What does HTML stand for?",
@@ -263,19 +263,21 @@ document.addEventListener("submit", (e) => {
 });
 
 //localstorage Declaration
-let getLocalStorageUser = JSON.parse(localStorage.getItem("users"));
+let getLocalStorageUser = JSON.parse(localStorage.getItem("users")) || [];
+
 //if localstorage is empty
 
-if (getLocalStorageUser == null) {
-  let dummyUser = {
-    name: "Dummy",
-    email: "Dummy@gmail.com",
-    password: "Dummy@1234",
-    id: new Date().toISOString(),
-    tests: [],
-  };
-  localStorage.setItem("users", JSON.stringify([dummyUser]));
-}
+// if (getLocalStorageUser == null) {
+//   let dummyUser = {
+//     name: "Dummy",
+//     email: "Dummy@gmail.com",
+//     password: "Dummy@1234",
+//     id: new Date().toISOString(),
+
+//     tests: [],
+//   };
+//   localStorage.setItem("users", JSON.stringify([dummyUser]));
+// }
 
 //Add user to localstorage:
 function addUser(fullName, userEmail, password) {
@@ -317,7 +319,7 @@ function signup(e) {
       "Password Should be  8 characters, Uppercase , Lowercase, Special Character and Numbers";
     e.preventDefault();
   } else {
-    let users = JSON.parse(localStorage.getItem("users"));
+    let users = JSON.parse(localStorage.getItem("users")) || [];
     let matchUser = users.find((user) => user.email === userEmail.value);
     console.log(matchUser);
     if (matchUser == undefined) {
@@ -340,7 +342,7 @@ function login() {
 
   if (matchUser != undefined) {
     alert("Welcome " + userEmail.value);
-
+    localStorage.setItem("userloggedIn", JSON.stringify(userEmail.value));
     location.replace("/pages/dashboard-page.html");
   } else {
     alert("Login ID Password Incorrect");
@@ -350,46 +352,3 @@ function login() {
 
 /************* Login Page & Signup Page Ends Here *************/
 
-/************* Quiz Page Start Here *************/
-
-let questionCount = document.getElementById("noOfQuestions");
-let progressBar = document.getElementById("progress-bar");
-let question = document.getElementById("questionText");
-let options = document.getElementById("options");
-let previousQues = document.getElementById("previous");
-let nextQuestion = document.getElementById("submitAndNext");
-let index = 0;
-
-//creates a shallow copy of main quetion arra and return it
-function shuffleQuestions() {
-  const shuffle = [...questionArr];
-  let i = shuffle.length,
-    j,
-    temp;
-
-  while (--i > 0) {
-    j = Math.floor(Math.random() * (i + 1));
-    temp = shuffle[j];
-    shuffle[j] = shuffle[i];
-    shuffle[i] = temp;
-  }
-
-  return shuffle.slice(0, 10);
-}
-const questions = shuffleQuestions();
-console.log(questions);
-
-function displayQuestion() {
-  question.innerHTML = questions[index].question;
-  for (let a = 0; a <= 4; a++) {
-    options.innerHTML += `<li> <input type="radio" name="options"> ${questions[0].options[a]} </li>`;
-  }
-}
-
-
-
-function exitQuiz() {
-  alert("This will end the quiz and will not save anything");
-  location.replace("/pages/dashboard-page.html");
-}
-/************* Quiz Page Ends Here *************/
