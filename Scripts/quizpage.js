@@ -7,6 +7,9 @@ const options = document.getElementById("options");
 const previousQues = document.getElementById("previous");
 const nextQuestion = document.getElementById("submitAndNext");
 const timer = document.getElementById("timer");
+const radios = document.querySelectorAll('input[name="option"]');
+const userResponse = {};
+let storeQtAns = [];
 let questionIndex = 0;
 
 //creates a shallow copy of main quetion arra and return it
@@ -27,31 +30,29 @@ function shuffleQuestions() {
 }
 const questions = shuffleQuestions();
 
-function addQuestToUser(){
-const users = JSON.parse(localStorage.getItem('users'));
+function addQuestToUser() {
+  const users = JSON.parse(localStorage.getItem("users"));
 
-const targetEmail = JSON.parse(localStorage.getItem('userloggedIn'));
+  const targetEmail = JSON.parse(localStorage.getItem("userloggedIn"));
 
-console.log(targetEmail);
+  console.log(targetEmail);
 
-const newTest = {
+  const newTest = {
     score: "100",
-    questions : questions[0],
-    date : new Date().toISOString()
-};
+    questions: questions[0],
+    date: new Date().toISOString(),
+  };
 
-const userIndex = users.findIndex(user=> user.email == targetEmail);
-console.log(userIndex);
+  const userIndex = users.findIndex((user) => user.email == targetEmail);
+  console.log(userIndex);
 
-if(userIndex !== -1){
+  if (userIndex !== -1) {
     users[userIndex].tests.push(newTest);
-    console.log("Data Pushed")
+    console.log("Data Pushed");
+  }
+
+  localStorage.setItem("users", JSON.stringify(users));
 }
-
-localStorage.setItem('users',JSON.stringify(users));
-
-}
-
 
 function renderQuestion(index) {
   if (index >= questions.length) {
@@ -67,9 +68,10 @@ function renderQuestion(index) {
   question.innerHTML = questions[questionIndex].question;
   options.innerHTML = "";
 
-  for (let a = 0; a <= Object.keys(questions[0].options).length; a++) {
-    options.innerHTML += `<li> <input type="radio" name="options"> ${questions[questionIndex].options[a]} </li>`;
+  for (let a = 1; a <= Object.keys(questions[0].options).length; a++) {
+    options.innerHTML += `<li><input type="radio" name="options" id="opt"> ${questions[questionIndex].options[a]} <li> `;
   }
+
 }
 
 function timeEvent() {
@@ -78,7 +80,7 @@ function timeEvent() {
     let minitues = Math.floor(quizTime / 60);
     let seconds = quizTime % 60;
     quizTime--;
-    console.log(quizTime);
+    // console.log(quizTime);
     timer.innerHTML = `${minitues} : ${seconds} remaining`;
 
     if (quizTime <= 0) {
@@ -86,13 +88,15 @@ function timeEvent() {
       location.replace("/pages/rank-page.html");
       clearInterval(countDown);
     }
-  }, 1000);
+  }, 1000); 
 }
+
 function displayQuestion() {
   renderQuestion(questionIndex);
   nextQuestion.addEventListener("click", () => {
     questionIndex++;
-    console.log(questionIndex);
+    storeQtAns += JSON.stringify(questions[questionIndex]);
+    console.log(storeQtAns);
     renderQuestion(questionIndex);
   });
 
@@ -103,15 +107,14 @@ function displayQuestion() {
   });
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  displayQuestion();
-  timeEvent();
-});
-
 function exitQuiz() {
   alert("This will end the quiz and will not save anything");
   location.replace("pages/dashboard-page.html");
 }
 
+window.addEventListener("DOMContentLoaded", () => {
+  displayQuestion();
+  timeEvent();
+});
 
 /************* Quiz Page Ends Here *************/

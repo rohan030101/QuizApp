@@ -5,7 +5,7 @@ const questionsArr = [
     options: {
       1: "Hyper Text Markup Language",
       2: "Home Tool Markup Language",
-      3: "Hyperlinks and Text Markup Language",
+      3: "Hyperlinks and Text Markup Language", 
       4: "Hyper Tool Multi Language",
     },
     answer: "1",
@@ -14,10 +14,10 @@ const questionsArr = [
     index: 2,
     question: "Which HTML tag is used to define an internal style sheet?",
     options: {
-      1: "<script>",
-      2: "<style>",
-      3: "<css>",
-      4: "<link>",
+      1: "&lt;script&gt;",
+      2: "&lt;style&gt;",
+      3: "&lt;css&gt;",
+      4: "&lt;link&gt;",
     },
     answer: "2",
   },
@@ -47,17 +47,16 @@ const questionsArr = [
     index: 5,
     question: "Inside which HTML element do we put the JavaScript?",
     options: {
-      1: "<js>",
-      2: "<scripting>",
-      3: "<script>",
-      4: "<javascript>",
+      1: "&lt;js&gt;",
+      2: "&lt;scripting&gt;",
+      3: "&lt;script&gt;",
+      4: "&lt;javascript&gt;",
     },
     answer: "3",
   },
   {
     index: 6,
-    question:
-      "Which operator is used to assign a value to a variable in JavaScript?",
+    question: "Which operator is used to assign a value to a variable in JavaScript?",
     options: {
       1: "-",
       2: "=",
@@ -81,10 +80,10 @@ const questionsArr = [
     index: 8,
     question: "Which HTML tag is used to define an unordered list?",
     options: {
-      1: "<ul>",
-      2: "<ol>",
-      3: "<list>",
-      4: "<li>",
+      1: "&lt;ul&gt;",
+      2: "&lt;ol&gt;",
+      3: "&lt;list&gt;",
+      4: "&lt;li&gt;",
     },
     answer: "1",
   },
@@ -114,10 +113,10 @@ const questionsArr = [
     index: 11,
     question: "What is the correct HTML element for inserting a line break?",
     options: {
-      1: "<break>",
-      2: "<lb>",
-      3: "<br>",
-      4: "<linebreak>",
+      1: "&lt;break&gt;",
+      2: "&lt;lb&gt;",
+      3: "&lt;br&gt;",
+      4: "&lt;linebreak&gt;",
     },
     answer: "3",
   },
@@ -156,8 +155,7 @@ const questionsArr = [
   },
   {
     index: 15,
-    question:
-      "Which method adds an element at the end of an array in JavaScript?",
+    question: "Which method adds an element at the end of an array in JavaScript?",
     options: {
       1: "push()",
       2: "add()",
@@ -184,7 +182,7 @@ const questionsArr = [
       1: "// this is a comment",
       2: "/* this is a comment */",
       3: "' this is a comment",
-      4: "<!-- this is a comment -->",
+      4: "&lt;!-- this is a comment --&gt;",
     },
     answer: "2",
   },
@@ -195,7 +193,7 @@ const questionsArr = [
       1: "# this is a comment",
       2: "' this is a comment",
       3: "// this is a comment",
-      4: "<!-- this is a comment -->",
+      4: "&lt;!-- this is a comment --&gt;",
     },
     answer: "3",
   },
@@ -203,10 +201,10 @@ const questionsArr = [
     index: 19,
     question: "Which tag is used to create a hyperlink in HTML?",
     options: {
-      1: "<a>",
-      2: "<link>",
-      3: "<href>",
-      4: "<hyperlink>",
+      1: "&lt;a&gt;",
+      2: "&lt;link&gt;",
+      3: "&lt;href&gt;",
+      4: "&lt;hyperlink&gt;",
     },
     answer: "1",
   },
@@ -214,32 +212,47 @@ const questionsArr = [
     index: 20,
     question: "How can you make a numbered list in HTML?",
     options: {
-      1: "<ul>",
-      2: "<ol>",
-      3: "<dl>",
-      4: "<list>",
+      1: "&lt;ul&gt;",
+      2: "&lt;ol&gt;",
+      3: "&lt;dl&gt;",
+      4: "&lt;list&gt;",
     },
     answer: "2",
   },
 ];
 
-//To toggle the password visibilty
-let toggle = document.getElementById("togglePassword");
-let passwordFiled = document.getElementById("passwordField");
 
-function passToggle() {
-  if (passwordFiled.type === "password") {
-    passwordFiled.type = "text";
-    toggle.classList.remove("fa-eye");
-    toggle.classList.add("fa-eye-slash");
-    console.log(passwordFiled.type);
-  } else {
-    passwordFiled.type = "password";
-    toggle.classList.remove("fa-eye-slash");
-    toggle.classList.add("fa-eye");
-    console.log(passwordFiled.type);
-  }
-}
+//To toggle the password visibilty
+// let toggle = document.getElementById("togglePassword");
+// let passwordFiled = document.getElementById("passwordField");
+
+// toggle.addEventListener("click", ()=>{
+//   if (passwordFiled.type === "password") {
+//     passwordFiled.type = "text";
+//     toggle.classList.remove("fa-eye");
+//     toggle.classList.add("fa-eye-slash");
+//     console.log(passwordFiled.type);
+//   } else {
+//     passwordFiled.type = "password";
+//     toggle.classList.remove("fa-eye-slash");
+//     toggle.classList.add("fa-eye");
+//     console.log(passwordFiled.type);
+//   }
+// });
+
+// function passToggle() {
+//   if (passwordFiled.type === "password") {
+//     passwordFiled.type = "text";
+//     toggle.classList.remove("fa-eye");
+//     toggle.classList.add("fa-eye-slash");
+//     console.log(passwordFiled.type);
+//   } else {
+//     passwordFiled.type = "password";
+//     toggle.classList.remove("fa-eye-slash");
+//     toggle.classList.add("fa-eye");
+//     console.log(passwordFiled.type);
+//   }
+// }
 
 function toQuizApp() {
   addEventListener("click", () => {
