@@ -238,8 +238,8 @@
   font-size: 28px;
   font-weight: 600;
 }
-.question-option ul li {
-  margin: 8px 0;
+.question-option {
+  margin: 16px 0;
   list-style-type: none;
   font-size: 20px;
   font-weight: 500;
