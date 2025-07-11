@@ -240,11 +240,22 @@ function shuffleQuestions() {
   return shuffle.slice(0, 10);
 }
 
+let startQuiz = document.getElementById('startQuiz')
 
-let quizQuestions = shuffleQuestions();
+startQuiz.addEventListener('click',()=>{
+  let quizQuestions = shuffleQuestions();
+  localStorage.setItem('currentQuizQuestions',JSON.stringify(quizQuestions));
+  location.replace("/pages/quiz-page.html"); 
+})
+
 // console.log(quizQuestions);
 
-localStorage.setItem('currentQuizQuestions',JSON.stringify(quizQuestions));
+
+function logout(){
+  localStorage.removeItem('currentQuizQuestions')
+  localStorage.removeItem('userloggedIn');
+  location.replace("../index.html");
+}
 
 
 

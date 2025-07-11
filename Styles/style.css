@@ -135,7 +135,9 @@
   width: 20%;
 }
 
-#errorEmail,#error-name,#error-pass {
+#errorEmail,
+#error-name,
+#error-pass {
   color: red;
   text-align: center;
 }
@@ -234,15 +236,16 @@
   margin: 10px 0;
 }
 
-.question-option label {
-  font-size: 28px;
-  font-weight: 600;
-}
 .question-option {
   margin: 16px 0;
   list-style-type: none;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.question-option label {
+  cursor: pointer;
 }
 
 .question-nagivation-buttons {
@@ -263,10 +266,8 @@
   background-color: #bfbfc5;
 }
 
-.exitQuiz{
+.exitQuiz {
   cursor: pointer;
 }
-
-
 
 /* Question Page Ends Here */

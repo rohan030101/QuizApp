@@ -7,20 +7,35 @@ const previousQues = document.getElementById("previous");
 const nextQuestion = document.getElementById("submitAndNext");
 const timer = document.getElementById("timer");
 const radios = document.getElementsByName("option");
-const progressBar = document.querySelector('.progress-bar');
-let currentWidth = Math.min(100,progressBar.style.width) + 10 ;
-console.log(currentWidth);
-
+const progressBar = document.querySelector(".progress-bar");
+const exitQuiz = document.getElementById('exitQuiz');
+let currentWidth = Math.min(100, progressBar.style.width) + 10;
 let storeQtAns = [];
 let questionIndex = 0;
 let score = 0;
+previousQues.disabled = false;
 const questions = JSON.parse(localStorage.getItem("currentQuizQuestions"));
-// console.log(questions[0].answer);
+const users = JSON.parse(localStorage.getItem("users"));
 
+// console.log(users.tests);
+
+// console.log(questions[0].answer);
 function renderQuestion(index) {
   if (index >= questions.length) {
-    alert(`Your total score is ` + score);
+    let test = {
+      testId: new Date().toISOString(),
+      submittedTest: JSON.parse(localStorage.getItem("test")),
+      totalScore: score,
+    };
+    alert(JSON.stringify(localStorage.getItem("test")));
+    let loggedInUser = users.find(
+      (user) => user.email === JSON.parse(localStorage.getItem("userloggedIn"))
+    );
+    console.log(loggedInUser);
+    loggedInUser.tests.push(test);
     alert("Submit and Exit");
+    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.removeItem("test");
     location.replace("/pages/dashboard-page.html");
     return;
   }
@@ -44,19 +59,19 @@ function renderQuestion(index) {
       storedAnswer.seletedOption == questions[questionIndex].options[a].id
         ? "checked"
         : "";
-    options.innerHTML += `<input type="radio" class="question-option" name="option" id="${a}" value="${questions[questionIndex].options[a].id}" ${isChecked}> ${questions[questionIndex].options[a].value} <br>`;
-    
+    options.innerHTML += `<input type="radio" class="question-option" name="option" id="${a}" value="${questions[questionIndex].options[a].id}" ${isChecked}> <label for="${a}">${questions[questionIndex].options[a].value}</label> <br>`;
   }
 }
 function timeEvent() {
   let quizTime = 1799;
+  // timer.innerHTML = `${Math.floor(quizTime/60)-1} : 00 Minitues Remaining`
   const countDown = setInterval(() => {
     let minitues = Math.floor(quizTime / 60);
     let seconds = quizTime % 60;
     quizTime--;
-    timer.innerHTML = `${minitues} : ${seconds} remaining`;
+    timer.innerHTML = `${minitues} : ${seconds} Minitues Remaining`;
 
-    if (quizTime <= 0) {
+    if (quizTime < 0) {
       alert("Times Up");
       location.replace("/pages/rank-page.html");
       clearInterval(countDown);
@@ -64,29 +79,35 @@ function timeEvent() {
   }, 1000);
 }
 
-function displayQuestion() {
+window.addEventListener('load',()=> {
+  timeEvent();
+  if (questionIndex < 0) {
+    console.log(questionIndex);
+    previousQues.disabled = true;
+  }
+
   renderQuestion(questionIndex);
   nextQuestion.addEventListener("click", () => {
-    console.log(currentWidth+10);
+    console.log(currentWidth + 10);
     const selectedRaionBtn = document.querySelector(
       'input[name="option"]:checked'
     );
-    
+
     if (selectedRaionBtn) {
       console.log(selectedRaionBtn.value == questions[questionIndex].answer);
-      if(selectedRaionBtn.value == questions[questionIndex].answer){
-        console.log(score= score +  100);
+      if (selectedRaionBtn.value == questions[questionIndex].answer) {
+        console.log((score = score + 100));
       }
-      let seletedAnswer = {
+      const selectedAnswer = {
         questIndex: questionIndex,
+        quest: questions[questionIndex].question,
         seletedOption: selectedRaionBtn.value,
-        testScore: score,
+        correctAnswer: questions[questionIndex].answer,
       };
-      storeQtAns.push(seletedAnswer);
+      storeQtAns.push(selectedAnswer);
       localStorage.setItem("test", JSON.stringify(storeQtAns));
       questionIndex++;
-        progressBar.style.width = (currentWidth+=10) +"%"
-      
+      progressBar.style.width = (currentWidth += 10) + "%";
     } else {
       alert("please selete and answer");
     }
@@ -96,23 +117,17 @@ function displayQuestion() {
   previousQues.addEventListener("click", () => {
     if (questionIndex > 0) {
       questionIndex--;
-        progressBar.style.width = (currentWidth-=10) +"%"
+      progressBar.style.width = (currentWidth -= 10) + "%";
       renderQuestion(questionIndex);
     }
   });
-}
-
-function addTests() {}
-
-function exitQuiz() {
-  alert("This will end the quiz and will not save anything");
-  location.replace("../pages/dashboard-page.html");
-}
-
-window.addEventListener("load", () => {
-  displayQuestion();
-  timeEvent();
-  addTests();
 });
+
+exitQuiz.addEventListener('click',()=> {
+  alert("This will end the quiz and will not save anything");
+  localStorage.removeItem('test');
+  location.replace("../pages/dashboard-page.html");
+})  
+
 
 /************* Quiz Page Ends Here *************/

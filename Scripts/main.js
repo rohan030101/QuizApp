@@ -113,10 +113,10 @@ function login() {
   let matchUser = users.find(
     (user) => user.email === userEmail.value && user.password === password.value
   );
-  console.log(matchUser);
+  // console.log(matchUser.name);
 
   if (matchUser != undefined) {
-    alert("Welcome " + userEmail.value);
+    alert("Welcome "+ matchUser.name);
     localStorage.setItem("userloggedIn", JSON.stringify(userEmail.value));
     location.replace("/pages/dashboard-page.html");
   } else {
